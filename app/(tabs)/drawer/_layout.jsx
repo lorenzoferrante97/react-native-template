@@ -17,6 +17,27 @@ export default function Layout() {
           title: "Input Text",
         }}
       />
+      <Drawer.Screen
+        name='flatList'
+        options={{
+          drawerLabel: "Flat List",
+          title: "Flat List",
+        }}
+      />
+      <Drawer.Screen
+        name='sectionList'
+        options={{
+          drawerLabel: "Section List",
+          title: "Section List",
+        }}
+      />
+      <Drawer.Screen
+        name='imageTest'
+        options={{
+          drawerLabel: "Images",
+          title: "Images",
+        }}
+      />
     </Drawer>
   )
 }

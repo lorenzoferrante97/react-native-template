@@ -1,6 +1,7 @@
-import { FlatList, Text, View } from "react-native"
+import { View } from "react-native"
+import FlatListComp from "../../../components/learning/flatListComp"
 
-const FlatListScreen = () => {
+export default function FlatListScreen() {
   const users = [
     { name: "Lorenzo" },
     { name: "Giulia" },
@@ -17,19 +18,12 @@ const FlatListScreen = () => {
   return (
     <View
       style={{
-        width: "full",
         backgroundColor: "#ffffcc",
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <Text style={{ fontSize: 36, textAlign: "center" }}>FlatList</Text>
-      <FlatList
-        data={users}
-        renderItem={({ item }) => <Text style={{ fontSize: 20 }}>{item.name}</Text>}
-      />
+      <FlatListComp data={users} />
     </View>
   )
 }
-
-export default FlatListScreen
