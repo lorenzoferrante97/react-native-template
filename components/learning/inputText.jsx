@@ -6,7 +6,11 @@ const InputText = () => {
 
   return (
     <>
+      <Text nativeID='label'>Input Label</Text>
       <TextInput
+        accessible={true}
+        accessibilityLabel='Input di testo'
+        accessibilityLabelledBy='label'
         placeholder='scrivi qui...'
         onChangeText={(newText) => setText(newText)}
         defaultValue={text}

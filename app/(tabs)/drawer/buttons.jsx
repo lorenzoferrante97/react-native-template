@@ -21,6 +21,8 @@ export default function ButtonsScreen() {
         alignItems: "center",
       }}>
       <AnimatedButton
+        accessible={true}
+        accessibilityLabel='Test Button'
         style={{
           opacity: opacity,
           width: "auto",
