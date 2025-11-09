@@ -4,10 +4,10 @@ export default function Layout() {
   return (
     <Drawer>
       <Drawer.Screen
-        name='drawerHome'
+        name='deviceOS'
         options={{
-          drawerLabel: "Drawer Home",
-          title: "Home",
+          drawerLabel: "Device OS",
+          title: "Device OS",
         }}
       />
       <Drawer.Screen
