@@ -1,11 +1,11 @@
 import { useState } from "react"
-import { Text, TextInput, View } from "react-native"
+import { Text, TextInput } from "react-native"
 
-const CustomComp = () => {
+const InputText = () => {
   const [text, setText] = useState("")
 
   return (
-    <View>
+    <>
       <TextInput
         placeholder='scrivi qui...'
         onChangeText={(newText) => setText(newText)}
@@ -18,9 +18,9 @@ const CustomComp = () => {
         }}
       />
 
-      <Text style={{ padding: 10, fontSize: 42 }}>{text}</Text>
-    </View>
+      <Text style={{ padding: 4, fontSize: 42 }}>{text}</Text>
+    </>
   )
 }
 
-export default CustomComp
+export default InputText

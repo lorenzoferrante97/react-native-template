@@ -11,10 +11,10 @@ export default function Layout() {
         }}
       />
       <Drawer.Screen
-        name='drawerSecondPage'
+        name='inputText'
         options={{
-          drawerLabel: "Drawer second page",
-          title: "Second Page",
+          drawerLabel: "Input Text",
+          title: "Input Text",
         }}
       />
     </Drawer>

@@ -1,7 +1,7 @@
 import { View } from "react-native"
 import DetectedDeviceOS from "../../../components/learning/detectedDeviceOS"
 
-export default function DrawerHome() {
+export default function DeviceOsScreen() {
   return (
     <View
       style={{
