@@ -9,7 +9,7 @@ export default function Index() {
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <Text>Splash g Screen</Text>
+      <Text>Splash Screen (g)</Text>
 
       <Link replace href='/home' asChild>
         <Button title='Entra' />

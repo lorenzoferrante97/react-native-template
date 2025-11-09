@@ -1,5 +1,5 @@
 import { Link, useLocalSearchParams } from "expo-router"
-import { Text, View } from "react-native"
+import { Button, Text, View } from "react-native"
 
 export default function Second() {
   const { name } = useLocalSearchParams()
@@ -12,10 +12,10 @@ export default function Second() {
         alignItems: "center",
       }}>
       <View>
-        <Text>Second</Text>
+        <Text>Stack Second Page</Text>
         <Text>Ciao {name}</Text>
-        <Link push href='/feed/third'>
-          Vai a Third
+        <Link push href='/stack/third' asChild>
+          <Button title='Vai a Third Page' />
         </Link>
       </View>
     </View>

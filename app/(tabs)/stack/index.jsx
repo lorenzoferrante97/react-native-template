@@ -1,7 +1,7 @@
 import { Link } from "expo-router"
-import { Text, View } from "react-native"
+import { Button, Text, View } from "react-native"
 
-export default function Feed() {
+export default function Stack() {
   return (
     <View
       style={{
@@ -10,9 +10,9 @@ export default function Feed() {
         alignItems: "center",
       }}>
       <View>
-        <Text>Feed</Text>
-        <Link push href={{ pathname: "/feed/second", params: { name: "Lorenzo" } }}>
-          Vai a Second
+        <Text>Stack First Page</Text>
+        <Link asChild push href={{ pathname: "/stack/second", params: { name: "Lorenzo" } }}>
+          <Button title='Vai a second Page' />
         </Link>
       </View>
     </View>
@@ -22,8 +22,8 @@ export default function Feed() {
 // - <STACK> ----------------------------------------------------------------------------------
 // - <LINK> ---------------------------------------------------
 // --- OPTIONS -------------------
-// -------- push = feed -> second -> third -> BACK a second -> BACK a feed
-// -------- dismissTo = feed -> second -> third -> BACK a feed
+// -------- push = stack -> second -> third -> BACK a second -> BACK a stack
+// -------- dismissTo = stack -> second -> third -> BACK a stack
 
 // --- PARAMS -------------------
 // -------- params: { name: "Lorenzo" }

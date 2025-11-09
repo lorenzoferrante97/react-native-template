@@ -1,5 +1,5 @@
 import { Link } from "expo-router"
-import { Text, View } from "react-native"
+import { Button, Text, View } from "react-native"
 
 export default function Third() {
   return (
@@ -11,8 +11,8 @@ export default function Third() {
       }}>
       <View>
         <Text>Third</Text>
-        <Link dismissTo href='/feed'>
-          Torna a Feed
+        <Link asChild dismissTo href='/stack'>
+          <Button title='Torna a Stack First Page' />
         </Link>
       </View>
     </View>
