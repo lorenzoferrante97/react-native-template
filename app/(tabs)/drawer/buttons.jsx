@@ -1,6 +1,17 @@
-import { Text, TouchableHighlight, View } from "react-native"
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react"
+import { Animated, Text, TouchableHighlight, View } from "react-native"
 
 export default function ButtonsScreen() {
+  const opacity = new Animated.Value(0)
+
+  useEffect(
+    () => Animated.timing(opacity, { toValue: 1, duration: 400, useNativeDriver: true }).start(),
+    []
+  )
+
+  const AnimatedButton = Animated.createAnimatedComponent(TouchableHighlight)
+
   return (
     <View
       style={{
@@ -9,8 +20,9 @@ export default function ButtonsScreen() {
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <TouchableHighlight
+      <AnimatedButton
         style={{
+          opacity: opacity,
           width: "auto",
           maxWidth: 240,
           backgroundColor: "#000000",
@@ -21,7 +33,7 @@ export default function ButtonsScreen() {
         underlayColor='#00000066'
         onPress={() => console.log("button premuto!")}>
         <Text style={{ color: "#ffffff", textAlign: "center" }}>Button</Text>
-      </TouchableHighlight>
+      </AnimatedButton>
     </View>
   )
 }
