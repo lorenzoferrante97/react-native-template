@@ -1,5 +1,6 @@
 import { Link } from "expo-router"
-import { Button, Text, View } from "react-native"
+import { Button } from "react-native"
+import { Text, View } from "tamagui"
 
 export default function Index() {
   return (
@@ -9,7 +10,7 @@ export default function Index() {
         justifyContent: "center",
         alignItems: "center",
       }}>
-      <Text>Splash Screen (g)</Text>
+      <Text margin={10}>Splash Screen (g)</Text>
 
       <Link replace href='/home' asChild>
         <Button title='Entra' />

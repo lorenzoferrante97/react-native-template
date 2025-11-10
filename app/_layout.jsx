@@ -4,10 +4,12 @@ import {
   SpaceGrotesk_700Bold,
   useFonts,
 } from "@expo-google-fonts/space-grotesk"
-import { Stack } from "expo-router"
 
+import { TamaguiProvider } from "@tamagui/core"
+import { Stack } from "expo-router"
 import * as SplashScreen from "expo-splash-screen"
 import { useEffect } from "react"
+import { config } from "../tamagui.config"
 
 // import { myTheme } from "../themes"
 
@@ -42,7 +44,10 @@ export default function AppLayout() {
 
   return (
     // <Theme theme={myTheme}>
-    <Stack screenOptions={{ headerShown: false }} />
+    <TamaguiProvider config={config}>
+      <Stack screenOptions={{ headerShown: false }} />
+    </TamaguiProvider>
+
     // </Theme>
   )
 }
