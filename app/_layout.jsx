@@ -1,31 +1,23 @@
+import "react-native-reanimated"
+
 import {
   SpaceGrotesk_400Regular,
   SpaceGrotesk_600SemiBold,
   SpaceGrotesk_700Bold,
   useFonts,
 } from "@expo-google-fonts/space-grotesk"
-
-import { TamaguiProvider } from "@tamagui/core"
 import { Stack } from "expo-router"
 import * as SplashScreen from "expo-splash-screen"
 import { useEffect } from "react"
+import { useColorScheme } from "react-native"
+import { TamaguiProvider, Theme } from "tamagui"
 import { config } from "../tamagui.config"
-
-// import { myTheme } from "../themes"
-
-// function Theme({ theme }) {
-//   const colorScheme = useColorScheme() // "light" | "dark"
-
-//   return (
-//     <View style={theme[colorScheme]}>
-//       <Slot />
-//     </View>
-//   )
-// }
 
 SplashScreen.preventAutoHideAsync()
 
 export default function AppLayout() {
+  const colorScheme = useColorScheme() // 'light' | 'dark'
+
   const [loaded, error] = useFonts({
     SpaceGrotesk_400Regular,
     SpaceGrotesk_600SemiBold,
@@ -45,7 +37,9 @@ export default function AppLayout() {
   return (
     // <Theme theme={myTheme}>
     <TamaguiProvider config={config}>
-      <Stack screenOptions={{ headerShown: false }} />
+      <Theme name={colorScheme === "dark" ? "dark" : "light"}>
+        <Stack screenOptions={{ headerShown: false }} />
+      </Theme>
     </TamaguiProvider>
 
     // </Theme>
